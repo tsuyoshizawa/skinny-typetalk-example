@@ -1,7 +1,8 @@
 package controller
 
 import skinny._
-import skinny.filter._
+import skinny.filter.ErrorPageFilter
+import _root_.filter.AuthenticationFilter
 
 /**
  * The base controller for this Skinny application.
@@ -11,7 +12,8 @@ import skinny.filter._
 trait ApplicationController extends SkinnyController
     // with TxPerRequestFilter
     // with SkinnySessionFilter
-    with ErrorPageFilter {
+    with ErrorPageFilter
+    with AuthenticationFilter {
 
   // override def defaultLocale = Some(new java.util.Locale("ja"))
 

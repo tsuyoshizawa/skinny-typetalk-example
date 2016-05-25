@@ -42,7 +42,8 @@ object SkinnyAppBuild extends Build {
       "org.skinny-framework"    %% "skinny-test"          % skinnyVersion   % "test",
       "org.eclipse.jetty"       %  "jetty-webapp"         % jettyVersion    % "container",
       "org.eclipse.jetty"       %  "jetty-plus"           % jettyVersion    % "container",
-      "javax.servlet"           %  "javax.servlet-api"    % "3.1.0"         % "container;provided;test"
+      "javax.servlet"           %  "javax.servlet-api"    % "3.1.0"         % "container;provided;test",
+      "org.skinny-framework" %% "skinny-oauth2-controller" % "2.1.1"
     ),
     resolvers ++= Seq(
       "sonatype releases"  at "https://oss.sonatype.org/content/repositories/releases"

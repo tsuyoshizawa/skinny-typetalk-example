@@ -1,6 +1,11 @@
+<%@val currentUser: model.User %>
 <h3>Hello World!</h3>
 <hr/>
 <p>
+Good to see you ${currentUser.name}. <br />
 Your first Skinny app works!
 </p>
 
+<p>
+<a href="/logout"">Logout</a>
+</p>

@@ -7,6 +7,7 @@ object Controllers {
 
   def mount(ctx: ServletContext): Unit = {
     root.mount(ctx)
+    session.mount(ctx)
     AssetsController.mount(ctx)
   }
 
@@ -14,4 +15,9 @@ object Controllers {
     val indexUrl = get("/?")(index).as('index)
   }
 
+  object session extends SessionsController with Routes {
+    val typetalkLoginUrl = get("/auth/typetalk")(loginRedirect).as('typetalkLogin)
+    val typetalkLoginCallbackUrl = get("/auth/typetalk/callback")(callback).as('typetalkLogin)
+    val logoutUrl = get("/logout")(logout).as('logout)
+  }
 }
