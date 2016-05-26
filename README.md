@@ -1,6 +1,6 @@
 # Skinny Framework with Typetalk authentication
 
-[Skinny Framework](http://skinny-framework.org/) Skinny Framework authentication example using [Typetalk](https://typetalk.in) and OAuth 2.0 with Authorization Code.
+[Skinny Framework](http://skinny-framework.org/) authentication example using [Typetalk](https://typetalk.in) and OAuth 2.0 with Authorization Code.
 
 ## Create your Typetalk account
 
