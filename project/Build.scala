@@ -15,7 +15,7 @@ object SkinnyAppBuild extends Build {
   val appName = "skinny-blank-app"
   val appVersion = "0.1.0-SNAPSHOT"
 
-  val skinnyVersion = "2.1.1"
+  val skinnyVersion = "2.1.2"
   val theScalaVersion = "2.11.8"
   val jettyVersion = "9.2.17.v20160517"
 
@@ -34,6 +34,7 @@ object SkinnyAppBuild extends Build {
     ),
     libraryDependencies ++= Seq(
       "org.skinny-framework"    %% "skinny-framework"     % skinnyVersion,
+      "org.skinny-framework"    %% "skinny-oauth2-controller" % skinnyVersion,
       "org.skinny-framework"    %% "skinny-assets"        % skinnyVersion,
       "org.skinny-framework"    %% "skinny-task"          % skinnyVersion,
       "org.skinny-framework"    %  "skinny-logback"       % "1.0.9",
@@ -42,8 +43,7 @@ object SkinnyAppBuild extends Build {
       "org.skinny-framework"    %% "skinny-test"          % skinnyVersion   % "test",
       "org.eclipse.jetty"       %  "jetty-webapp"         % jettyVersion    % "container",
       "org.eclipse.jetty"       %  "jetty-plus"           % jettyVersion    % "container",
-      "javax.servlet"           %  "javax.servlet-api"    % "3.1.0"         % "container;provided;test",
-      "org.skinny-framework" %% "skinny-oauth2-controller" % "2.1.1"
+      "javax.servlet"           %  "javax.servlet-api"    % "3.1.0"         % "container;provided;test"
     ),
     resolvers ++= Seq(
       "sonatype releases"  at "https://oss.sonatype.org/content/repositories/releases"
